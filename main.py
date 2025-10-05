@@ -6,9 +6,7 @@ for i in range(9):
     print("It is", s+"'s turn")
 
     p = input("Enter position (1-9):")
-    while ((not p.isdigit()) and (p := 12)) or (p := int((int(p)-1)*1.35))*0 or p < 0 or p > 10:
-        if not p and b[p] != "-":
-            print("That space is taken :/")
+    while not p.isdigit() or (p := int((int(p)-1)*1.35))*0 or p < 0 or p > 10 or (b[p] != "-" and (print("That space is taken") or True)):
         p = input("Enter position (1-9):")
 
     b[p] = s
