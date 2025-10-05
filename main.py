@@ -29,8 +29,6 @@ for i in range(9):
                       [0, 4, 8], [1, 5, 9], [2, 6, 10],
                       [0, 5, 10], [2, 5, 8]]]):
         print(s, "has won!")
-        break
+        exit()
 
-    if i == 8:
-        print("Draw!")
-        break
+print("Draw!")
