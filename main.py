@@ -6,19 +6,13 @@ for i in range(9):
     print("It is", s+"'s turn")
 
     while True:
-        try:
-            p = int(input("Enter position (1-9):"))-1
-        except ValueError:
+        p = input("Enter position (1-9):")
+        if not p.isdigit() or (p := int((int(p)-1)*1.35))*0 or p < 0 or p > 10:
             print("Enter a number from 1 to 9")
-            continue
-        if p < 0 or p > 8:
-            print("Enter a number from 1 to 9")
-            continue
-        p += p//3
-        if b[p] != "-":
+        elif b[p] != "-":
             print("That space is taken :/")
-            continue
-        break
+        else:
+            break
 
     b[p] = s
 
