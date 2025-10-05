@@ -2,7 +2,7 @@ b = list("---\n"*3)
 for i in range(9):
     s = "XO"[i % 2]
     print("It is", s+"'s turn")
-    while(p:=input("Enter position (1-9) "))and not p.isdigit() or(p:=int(p)+(int(p)-1)//3-1)*0or p<0or p>10or b[p]!="-"and(print("That space is taken")or 1):
+    while(p:=input("Enter position (1-9) "))and not p.isdigit() or(p:=int(p)+(int(p)-1)//3-1)*0 or p<0 or p>10 or b[p]!="-"and(print("That space is taken")or 1):
         1
     b[p] = s
     print(''.join(b))
