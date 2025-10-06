@@ -1,7 +1,6 @@
 b=list("---\n"*3)
 for i in range(9):
-    s="XO"[i%2]
-    print("It is",s+"'s turn")
+    print("It is",(s:="XO"[i%2])+"'s turn")
     any((not((p:=input("Enter position (1-9) "))and 0 or not p.isdigit()or(p:=int(p)+(int(p)-1)//3-1)*0 or p<0 or p>10 or b[p]!="-"and(print("That space is taken")or 1))for _ in range(9**9)))
     b[p]=s
     print(''.join(b))
